@@ -6,7 +6,7 @@ module.exports=async(req,res)=>{
     const keys=["SMTP_HOST","SMTP_PORT","SMTP_SECURE","SMTP_USER","SMTP_PASS","CONTACT_EMAIL"];
     return res.status(200).json({
       ok:true,
-      service:"ThermomixTech contacto API",
+      service:"ThermomixRepair contacto API",
       environment:Object.fromEntries(keys.map(k=>[k,Boolean(process.env[k])]))
     });
   }
@@ -50,11 +50,11 @@ module.exports=async(req,res)=>{
     await transporter.verify();
 
     await transporter.sendMail({
-      from:`"ThermomixTech" <${process.env.SMTP_USER}>`,
+      from:`"ThermomixRepair" <${process.env.SMTP_USER}>`,
       to:process.env.CONTACT_EMAIL||process.env.SMTP_USER,
       replyTo:email,
-      subject:"Nueva consulta ThermomixTech - reparacionderobotcocina.com.es",
-      text:`Nueva consulta ThermomixTech
+      subject:"Nueva consulta ThermomixRepair - reparacionderobotcocina.com.es",
+      text:`Nueva consulta ThermomixRepair
 
 Nombre: ${nombre}
 Teléfono: ${telefono}
@@ -68,7 +68,7 @@ ${mensaje}`
     return res.status(200).json({ok:true});
 
   }catch(error){
-    console.error("ThermomixTech SMTP error",{
+    console.error("ThermomixRepair SMTP error",{
       message:error?.message,
       code:error?.code,
       response:error?.response,
