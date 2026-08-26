@@ -35,9 +35,10 @@ Maps se han mantenido sin cambios (según indicación del cliente),
 aunque siguen apuntando a la ubicación de Madrid — revisar si debe
 sustituirse por una ficha de Google Business de Valladolid.
 
-h1 nuevo: "Tu Thermomix ha dejado de funcionar. Antes de decidir
-nada, déjanos revisarla con la confianza de un servicio
-especializado."
+h1 actualizado (más corto, afirmativo, sin interrogación ni
+condicionales, incluye la marca): "Tu Thermomix no funciona. La
+revisamos con total confianza." Tamaño del H1 aumentado:
+clamp(38-56px) → clamp(46-74px) en escritorio, 40px → 48px en móvil.
 
 Modelos:
 - TM21
@@ -48,4 +49,35 @@ Modelos:
 
 El correo SMTP no aparece visible en la web; solo se utiliza en /api/contacto.
 Variables Vercel compartidas: SMTP_HOST, SMTP_PORT=465, SMTP_SECURE=true, SMTP_USER, SMTP_PASS, CONTACT_EMAIL.
-No se proporcionó código de Google Analytics; no se ha añadido ninguno.
+Google Analytics:
+G-YSB012JKGC
+
+HISTORIAL: el repositorio era multipágina (11 páginas /servicios/ de
+averías y mantenimiento Thermomix) y se convirtió a one-page; esas
+páginas fueron eliminadas en commits anteriores. Como ya no existen en
+el sitemap actual, se ha añadido middleware.mjs para redirigir (301)
+cualquier URL antigua a la home, evitando 404 en enlaces indexados o
+backlinks antiguos. Excluye /api/* y cualquier ruta con extensión de
+archivo. Se añadió "@vercel/functions": "^2.0.3" a package.json como
+dependencia de esta función.
+
+REVISIÓN (fixes aplicados en esta pasada):
+- Ya estaba bien: banner de cookies (ya corregido en un commit
+  anterior), schema.org LocalBusiness completo (con areaServed y
+  sameAs), sección SEO, menú móvil, borde blanco del chat,
+  api/contacto.js con SMTP + nodemailer. No se ha modificado ninguno
+  de estos.
+- Google Analytics: no existía. Añadido G-YSB012JKGC.
+- .navcall: el texto largo ("Atención Telefónica 24 horas 365 días")
+  deformaba la píldora del menú. Acortado a solo el número (mismo
+  número, +34 910 05 24 89) y añadido white-space:nowrap como
+  salvaguarda.
+
+AVISOS PENDIENTES (heredados, NO resueltos en esta pasada — mismo caso
+que se dio en DysonValladolid, donde el cliente después confirmó el
+dominio real; aquí sigue sin confirmar):
+- Confirmar si https://reparacionderobotcocina.com.es/ es realmente
+  el dominio de ThermomixRepair Valladolid o si sigue siendo el de la
+  versión de Madrid (ThermomixTech).
+- Confirmar si el enlace/iframe de Google Maps corresponde a una
+  ubicación de Valladolid o si sigue apuntando a Madrid.
