@@ -16,11 +16,11 @@ en vez del verde lima de la plantilla original (ThermomixTech). El
 color ámbar/dorado de la tarjeta TM7 "special" se mantiene tal cual,
 ya que es un acento deliberado para diferenciarla del resto.
 
-Dominio: https://reparacionderobotcocina.com.es/ (PENDIENTE DE
-CONFIRMAR — es el dominio de la versión de Madrid, ThermomixTech.
-Este repo partía de una copia exacta de ThermomixTech sin adaptar.
-Canonical, og:url y el "url" del JSON-LD siguen apuntando a ese
-dominio hasta que se confirme el dominio real de ThermomixRepair.)
+Dominio: https://reparacionrobotcocina.es/
+(CONFIRMADO por el cliente. Corregido en canonical, og:url, JSON-LD,
+robots.txt y sitemap.xml — antes apuntaban a
+reparacionderobotcocina.com.es, el dominio de la versión de Madrid,
+ThermomixTech.)
 
 Teléfono caja y botones: +34 910 05 24 89 / +34 649 97 01 28 WhatsApp
 (mantenidos tal cual, según indicación del cliente)
@@ -73,11 +73,9 @@ REVISIÓN (fixes aplicados en esta pasada):
   número, +34 910 05 24 89) y añadido white-space:nowrap como
   salvaguarda.
 
-AVISOS PENDIENTES (heredados, NO resueltos en esta pasada — mismo caso
-que se dio en DysonValladolid, donde el cliente después confirmó el
-dominio real; aquí sigue sin confirmar):
-- Confirmar si https://reparacionderobotcocina.com.es/ es realmente
-  el dominio de ThermomixRepair Valladolid o si sigue siendo el de la
-  versión de Madrid (ThermomixTech).
-- Confirmar si el enlace/iframe de Google Maps corresponde a una
-  ubicación de Valladolid o si sigue apuntando a Madrid.
+AVISOS RESUELTOS EN ESTA PASADA (mismo caso que DysonValladolid):
+- Dominio confirmado por el cliente: https://reparacionrobotcocina.es/
+  (corregido en canonical, og:url, JSON-LD, robots.txt, sitemap.xml).
+- Teléfono y Google Maps: confirmado por el cliente que se mantienen
+  igual que en ThermomixTech Madrid de forma intencional; no se han
+  tocado.
