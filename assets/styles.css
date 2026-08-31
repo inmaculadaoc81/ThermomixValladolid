@@ -20,6 +20,7 @@ a{text-decoration:none;color:inherit}
 
 /* Header */
 .header{position:sticky;top:0;z-index:9000;background:#123b2c;border-bottom:1px solid #0c2e22}
+.disclaimer-bar{background:#ffce31;color:#123b2c;text-align:center;font-size:12.5px;font-weight:800;padding:8px 16px}
 .nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .logo{height:48px;max-width:300px;object-fit:contain}
 .links{display:flex;gap:16px;align-items:center;font-size:13px;font-weight:850;color:#fff}
@@ -85,6 +86,9 @@ h1{font-size:clamp(46px,5.6vw,74px);line-height:1.04;letter-spacing:-2.2px;margi
 .reference{margin-top:14px;padding:16px;border-radius:17px;background:#f3f8eb}
 .reference p{margin:5px 0}
 .maplink{display:inline-block;margin-top:16px;color:var(--green2);font-weight:900}
+.privacy-link{color:#0e7a6b;text-decoration:underline}
+.privacy-check{display:flex;align-items:flex-start;gap:8px;font-size:14px}
+.privacy-check input{width:auto;margin-top:3px}
 
 /* Generic */
 section{padding:82px 0}
@@ -175,6 +179,8 @@ footer{background:#123b2c;color:#fff;padding:34px 0}
   .problem-grid{grid-template-columns:repeat(2,1fr)}
   .steps-grid{grid-template-columns:repeat(2,1fr)}
   .trust-grid{grid-template-columns:1fr}
+  .models::after{font-size:100px}
+  .fast-art::before{font-size:90px}
 }
 @media(max-width:600px){
   .wrap{width:min(100% - 28px,1180px)}
@@ -182,7 +188,9 @@ footer{background:#123b2c;color:#fff;padding:34px 0}
   h1{font-size:48px;letter-spacing:-1.5px}
   .model-grid,.problem-grid,.steps-grid,.ctas,form{grid-template-columns:1fr}
   .phone,.full{grid-column:auto}
-  .hero::after,.hero-note{display:none}
+  .hero::after{display:none}
+  .models::after{font-size:56px}
+  .fast-art::before{font-size:56px;left:20px;top:14px}
   .cal-frame{height:760px}
   .footer{flex-direction:column;align-items:flex-start}
   .float-wa{right:16px!important;bottom:18px!important}

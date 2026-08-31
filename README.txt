@@ -73,6 +73,46 @@ REVISIÓN (fixes aplicados en esta pasada):
   número, +34 910 05 24 89) y añadido white-space:nowrap como
   salvaguarda.
 
+REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente):
+- H1 repetía la plantilla "no funciona" ("Tu Thermomix no funciona. La
+  revisamos con total confianza."). Reescrito con estructura distinta
+  a la del repo hermano ThermomixTech de Madrid (imperativa en vez de
+  dos cláusulas): "Repara tu Thermomix con diagnóstico gratis en
+  Valladolid." (9 palabras).
+- BUG REAL — quitado ".hero-note" ("TM21 · TM31 · TM5 · TM6 · TM7"):
+  además de ser la misma insignia-ticker que el cliente pidió quitar
+  en ThermomixTech, cumplía el patrón de "etiqueta rotada" prohibido
+  para toda la familia (position:absolute + border-radius:999px +
+  transform:rotate(-5deg), solapándose con la caja de información en
+  anchos de tablet).
+- BUG REAL — dos textos decorativos gigantes sin reducción de tamaño
+  en tablet/móvil: ".models::after" ("THERMOMIX", 165px) y
+  ".fast-art::before" ("2 h", 160px, mismo patrón ya corregido en
+  ThermomixTech/DysonValladolid). Añadida reducción en tablet
+  (100px/90px) y móvil (56px/56px).
+- BUG REAL — el botón CTA de teléfono no tenía icono, a diferencia del
+  de WhatsApp. Añadido (verificado con cuidado el cierre de las
+  etiquetas </a>: 21 aperturas / 21 cierres).
+- La casilla de política de privacidad existía pero el texto no
+  enlazaba a ningún sitio. Añadido el enlace estándar de la familia a
+  https://kelatos.com/privacy-policy/, resaltado en azul.
+- Añadida franja de aviso de servicio técnico independiente debajo del
+  menú (ya existía un aviso de independencia en el texto SEO, pero no
+  de forma prominente bajo el menú). Verificado antes que .header no
+  usa display:flex directamente, solo su .nav interno.
+- Añadido "Sábados, domingos y días festivos estamos cerrados" debajo
+  del horario.
+- Verificado: schema.org ya usaba correctamente el único teléfono de
+  este repo (+34 910 05 24 89, igual en botones y caja de
+  información); formulario correctamente conectado a /api/contacto.
+- PENDIENTE DE CONFIRMAR CON EL CLIENTE (no se ha tocado): las filas
+  "Servicio" y "Diagnóstico" de la caja de información siguen
+  presentes, igual que en ThermomixTech antes de que el cliente
+  pidiera quitarlas por captura de pantalla. Como aquí no se ha
+  recibido esa instrucción específica para este repo, se han dejado
+  tal cual; avisar si se quieren quitar también aquí para mantener
+  coherencia con el repo hermano.
+
 AVISOS RESUELTOS EN ESTA PASADA (mismo caso que DysonValladolid):
 - Dominio confirmado por el cliente: https://reparacionrobotcocina.es/
   (corregido en canonical, og:url, JSON-LD, robots.txt, sitemap.xml).
